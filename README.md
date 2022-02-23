@@ -1,5 +1,6 @@
 # Cocoon clone
 Bài tập lớn (Mini project)
+
 A (2.5đ). Khảo sát thực trạng, phát biểu vấn đề, phát biểu giải pháp/ý tưởng, xây dựng mô hình kinh doanh, lập business canvas model, pricing model cho sản phẩm/dịch vụ
 
 B (3đ). Xây dựng bản thiết kế UX/UI cho hệ thống phát triển (sử dụng figma)
