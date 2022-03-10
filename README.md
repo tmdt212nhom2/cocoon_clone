@@ -24,3 +24,5 @@ F (2đ). Demo công nghệ (điểm cộng thêm cho Sinh Viên)
 - Sử dụng woocommmerce, opencart, hoặc các platform có sẵn. So sánh với khả năng hỗ trợ của platform này với thiết kế ban đầu. (1đ)
 
 Ghi chú: nhóm/thành viên không thuyết trình vào cuối khoá sẽ không được tính điểm
+
+Nộp code + báo cáo
