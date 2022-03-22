@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 20, 2022 at 05:49 AM
+-- Generation Time: Mar 22, 2022 at 01:58 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `web211`
+-- Database: `web212`
 --
 
 -- --------------------------------------------------------
@@ -208,6 +208,17 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`user_id`, `user_name`, `email`, `phone`, `password`, `role`) VALUES
 (2147483647, 'ntn', 'thuyngocnguyen01@gmail.com', '0937785461', '123456', 'customer');
+
+--
+-- Triggers `user`
+--
+DELIMITER $$
+CREATE TRIGGER `after_insert_user` AFTER INSERT ON `user` FOR EACH ROW IF new.role ="customer" 
+THEN 
+  INSERT INTO customer VALUES(new.user_id, new.user_name); 
+END IF
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
