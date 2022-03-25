@@ -114,7 +114,11 @@
         <div><br><br></div>
 
         <div>
+<<<<<<< HEAD
     <a id="page-cart__control-btn" class="uk-button" href="#">RETURN TO SHOP</a>
+=======
+  <a id="page-cart__control-btn" class="uk-button" href="#">RETURN TO SHOP</a>
+>>>>>>> 99ad779b710da96b4aa8554b9f6ad32beb4cbc98
 
 </div>
       </div>
@@ -243,6 +247,10 @@
 
         Object.values(productItem).map(item => {
             let myProduct = document.getElementsByClassName('product__' + item.tag)[0];
+<<<<<<< HEAD
+=======
+            console.log(item.tag);
+>>>>>>> 99ad779b710da96b4aa8554b9f6ad32beb4cbc98
             if (myProduct === undefined){
                 container.innerHTML += ''
                     + '<div class="product product__' + item.tag + '">'
