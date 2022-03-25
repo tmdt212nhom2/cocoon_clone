@@ -216,11 +216,7 @@
     ?>
   </div>
 
-<<<<<<< HEAD
 <script type="text/javascript">
-=======
-  <script type="text/javascript">
->>>>>>> 99ad779b710da96b4aa8554b9f6ad32beb4cbc98
 
 let foodTag = new Map([
     ["Bún thịt nướng", "pho_bo"]
