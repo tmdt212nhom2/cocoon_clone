@@ -35,7 +35,7 @@ Nộp code + báo cáo
 * **Start** Xampp control panel. Start the Apache and MySql modules.
 * ![image](https://user-images.githubusercontent.com/47769063/137183880-f6cbc47f-58ac-407a-855a-c44cc2a15063.png)
 * **Open** [phpmyadmin](http://localhost/phpmyadmin/server_databases.php) in browser and create a new database called `web212`.
-* **Go** to your cloned project directory, you'll see `web212.sql` file. Import it into database `212web`.
+* **Go** to your cloned project directory, you'll see `web212.sql` file. Import it into database `web212`.
 * **Now** going to [http://localhost/assigment/](http://localhost/assigment/) will open the project.
 
 <hr />
