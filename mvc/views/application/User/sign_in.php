@@ -5,8 +5,8 @@ if (isset($_SESSION["email"]) && $_SESSION["role"] == "admin") {
 }
 
 if (isset($_SESSION["email"]) && $_SESSION["role"] == "customer") {
-    echo '<script type = "text/javascript">
-    window.location.href = "http://localhost/assignment/"</script>';
+         echo '<script type = "text/javascript">
+        window.location.href = "http://localhost/assignment/"</script>';
 }
 
 if (isset($_POST['submit'])) {
@@ -18,11 +18,17 @@ if (isset($_POST['submit'])) {
         $_SESSION["email"] = $row['email'];
         $_SESSION["password"] = $row['password'];
         $_SESSION["role"] = $row['role'];
+        $_SESSION["id"] = $row['user_id'];
         if (isset($_SESSION["email"])) {        
             if ($row['role'] == "admin")
             {
                 echo '<script type = "text/javascript">
                 window.location.href = "http://localhost/assignment/Category/index"</script>';
+            }
+            elseif (isset($_SESSION["payment"])){
+                unset($_SESSION["payment"]);
+                echo '<script type = "text/javascript">
+                window.location.href = "http://localhost/assignment/Home/payment/"</script>';
             }
             else {
                 echo '<script type = "text/javascript">

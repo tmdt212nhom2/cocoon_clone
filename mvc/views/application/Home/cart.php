@@ -96,11 +96,10 @@
       <div class="page-cart__box">
         <div class="uk-grid uk-grid-medium uk-width-1-1 uk-flex-left slotname" data-uk-grid style="position: absolute; margin-left: 2%;">
           <div class="">
-            <input class="uk-input " type="text" placeholder="Your Name On Slot (*)" value="" style="margin-top: 26px;" required>
-            <input class="uk-input" type="text" placeholder="Your email" value="" style="margin-top: 5px;">
-            <input class="uk-input" type="text" placeholder="Your phone" value="" style="margin-top: 5px;">
-            <input class="uk-input" type="text" placeholder="Your address" value="" style="margin-top: 5px;">
-
+            <input class="uk-input " id="name" type="text" placeholder="Your Name On Slot (*)" value="" style="margin-top: 26px;" required>
+            <input class="uk-input" id="email" type="text" placeholder="Your email" value="" style="margin-top: 5px;">
+            <input class="uk-input" id="phone" type="text" placeholder="Your phone" value="" style="margin-top: 5px;">
+            <input class="uk-input" id="address" type="text" placeholder="Your address" value="" style="margin-top: 5px;">
           </div>
         </div>
         <div class="page-cart__title">
@@ -114,7 +113,7 @@
         <div><br><br></div>
 
         <div>
-    <a id="page-cart__control-btn" class="uk-button" href="#">RETURN TO SHOP</a>
+    <a id="page-cart__control-btn" class="uk-button" href="#" onclick="getInfo()">RETURN TO SHOP</a>
 
 </div>
       </div>
@@ -206,7 +205,6 @@
     }
 
     function PlusBtn(tag){
-        console.log(tag);
         let productItem = localStorage.getItem('productItem');
         productItem = JSON.parse(productItem);
         productItem[tag].quantity++;
@@ -265,6 +263,31 @@
         totalEle.innerHTML = 'Total:  ' + total;
     }
 
+    function getInfo(){
+      
+        var btn = document.getElementById('page-cart__control-btn');
+        const text = btn.innerHTML;
+        
+        if (text=="PAYMENT"){
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var address = document.getElementById('address').value;
+            var price = document.getElementsByClassName('page-cart__title')[0].innerHTML.slice(8);
+            if ((name == "" || email =="" || phone =="" || address=="")){
+                alert("Please fill in your infomation!");
+            }
+            else{
+                localStorage.setItem("name", name);
+                localStorage.setItem("email", email);
+                localStorage.setItem("phone", phone);
+                localStorage.setItem("address", address);
+                
+                btn.href = 'http://localhost/assignment/Home/payment/'+price;
+            }
+        }
+    }
+
     function ChangeUI(){
         let productNumber = localStorage.getItem('productNumber');
         productNumber = parseInt(productNumber);
@@ -272,7 +295,7 @@
         if (productNumber > 0){
             var btn = document.getElementById('page-cart__control-btn');
             var total = document.getElementsByClassName('page-cart__title')[0];
-            btn.href = 'http://localhost/assignment/Home/payment/';
+            // btn.href = 'http://localhost/assignment/Home/payment/';
             btn.innerHTML = 'PAYMENT';
             document.getElementsByClassName('page-cart__img')[0].style.display = 'none';
             total.style.textAlign = 'right';

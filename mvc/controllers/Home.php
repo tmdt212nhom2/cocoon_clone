@@ -31,7 +31,14 @@
         }
 
         function payment($price){
-            $layout = $this->view("layouts/application", ["page"=>"application/Home/payment", "header"=>"shared/header", "footer"=>"shared/footer", "price" =>$price]);
+            $order = $this->model("OrderModel");
+            $layout = $this->view("layouts/application", ["page"=>"application/Home/payment", "header"=>"shared/header", "footer"=>"shared/footer", "price" =>$price, "orderModel"=>$order]);
+            echo $layout;
+        }
+
+        function test($oid, $uid, $datetime, $price, $name, $email, $phone, $address){
+            $order = $this->model("OrderModel");
+            $layout = $this->view("layouts/application", ["page"=>"application/Home/test", "header"=>"shared/header", "footer"=>"shared/footer","oid"=>$oid, "uid"=>$uid,"date"=>$datetime, "price"=>$price, "name"=>$name, "email"=>$email, "phone"=>$phone, "address"=>$address,"orderModel"=>$order]);
             echo $layout;
         }
     }
