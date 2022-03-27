@@ -39,8 +39,9 @@
           <td><?php echo $row["customer_id"] ?></td>
           <td><?php echo $row["cmt_time"] ?></td>
           <td><?php echo $row["cmt"] ?></td>
-          <!-- <td><a href="#">Edit</td> -->
-          <td><a href="http://localhost/Assignment/Comment/delete/<?php echo $row["product_id"]?>/<?php echo $row["customer_id"]?>">Delete</td>
+
+          <td><a href="#">Edit</td>
+          <td><a href="#">Delete</td>
         </tr>
       <?php 
         }

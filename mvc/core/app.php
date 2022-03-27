@@ -1,5 +1,6 @@
 <?php 
     class App{
+
         protected $controller = "Home";
         protected $action = "index";
         protected $params = [];
@@ -18,7 +19,6 @@
 
             require_once "./mvc/controllers/".$this->controller.".php";
             $this->controller = new $this->controller;
-            
             //action process
             if(isset($arr[1])){
                 if (strlen(strstr($arr[1], ".php")) > 0) {
@@ -29,7 +29,6 @@
                 }
                 unset($arr[1]);
             }
-
             
             //params process
             $this->params = $arr?array_values($arr):[];

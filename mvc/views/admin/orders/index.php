@@ -26,7 +26,6 @@
         <th>Total price</th>
         <th>Address</th>
         <th>Phone</th>
-        <!-- <th>Status</th> -->
 
         <th colspan="2"></th>
       </tr>
@@ -43,9 +42,8 @@
           <td><?php echo $row["total_price"] ?></td>
           <td><?php echo $row["address"] ?></td>
           <td><?php echo $row["phone"] ?></td>
-          <!-- <td><?php echo $row["status"] ?></td>
-          <td><a href="http://localhost/Assignment/Order/edit/<?php echo $row["order_id"] ?>">Edit</td>
-          <td><a href="http://localhost/Assignment/Order/delete/<?php echo $row["order_id"] ?>">Delete</td> -->
+          <td><a href="#">Edit</td>
+          <td><a href="#">Delete</td>
         </tr>
       <?php 
         }

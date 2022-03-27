@@ -30,6 +30,8 @@
   <script src="../../../assignment/public/assets/js/uikit-icons.min.js"></script>
   <script src="../../../assignment/public/assets/js/main.js"></script>
   <script src="../../../assignment/public/assets/js/fontawesome.all.min.js"></script>
+  <script src="../../../assignment/public/assets/js/jquery.easypiechart.min.js"></script>
+
 </body>
 
 </html>

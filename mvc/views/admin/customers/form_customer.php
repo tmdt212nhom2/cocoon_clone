@@ -1,4 +1,4 @@
-<!-- <%= form_with(model: customer) do |form| %> -->
+<%= form_with(model: customer) do |form| %>
 <div class="card">
     <div class="card-body">
         <form action="POST">
@@ -16,4 +16,4 @@
 
     </div>
 </div>
-<!-- <% end %> -->
+<% end %>

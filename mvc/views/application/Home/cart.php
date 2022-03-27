@@ -96,10 +96,11 @@
       <div class="page-cart__box">
         <div class="uk-grid uk-grid-medium uk-width-1-1 uk-flex-left slotname" data-uk-grid style="position: absolute; margin-left: 2%;">
           <div class="">
-            <input class="uk-input " id="name" type="text" placeholder="Your Name On Slot (*)" value="" style="margin-top: 26px;" required>
-            <input class="uk-input" id="email" type="text" placeholder="Your email" value="" style="margin-top: 5px;">
-            <input class="uk-input" id="phone" type="text" placeholder="Your phone" value="" style="margin-top: 5px;">
-            <input class="uk-input" id="address" type="text" placeholder="Your address" value="" style="margin-top: 5px;">
+            <input class="uk-input " type="text" placeholder="Your Name On Slot (*)" value="" style="margin-top: 26px;" required>
+            <input class="uk-input" type="text" placeholder="Your email" value="" style="margin-top: 5px;">
+            <input class="uk-input" type="text" placeholder="Your phone" value="" style="margin-top: 5px;">
+            <input class="uk-input" type="text" placeholder="Your address" value="" style="margin-top: 5px;">
+
           </div>
         </div>
         <div class="page-cart__title">
@@ -113,7 +114,7 @@
         <div><br><br></div>
 
         <div>
-    <a id="page-cart__control-btn" class="uk-button" href="#" onclick="getInfo()">RETURN TO SHOP</a>
+  <a id="page-cart__control-btn" class="uk-button" href="#">RETURN TO SHOP</a>
 
 </div>
       </div>
@@ -151,11 +152,7 @@
         selectedItem.name = document.getElementsByClassName('product-full-card__title')[0].innerHTML;
         selectedItem.price = parseFloat((document.getElementById('price-value').innerHTML).substring(1));
         selectedItem.quantity = parseInt(document.getElementById('counter-value').value);
-       
-        // selectedItem.tag = foodTag.get(selectedItem.name);
-        selectedItem.tag = JSON.parse(document.getElementById('product-tag').innerHTML);
-
-        
+        selectedItem.tag = foodTag.get(selectedItem.name);
         img = document.getElementById("product-picture");                                                   // img to data url
         var imgCanvas = document.createElement("canvas"),
             imgContext = imgCanvas.getContext("2d");
@@ -165,6 +162,8 @@
         var imgAsDataURL = imgCanvas.toDataURL("");
 
         selectedItem.img_src = imgAsDataURL;                                                                // store image to selectedItem
+
+        console.log(selectedItem);
 
         let productItem = localStorage.getItem('productItem');
         productItem = JSON.parse(productItem);
@@ -263,41 +262,16 @@
         totalEle.innerHTML = 'Total:  ' + total;
     }
 
-    function getInfo(){
-      
-        var btn = document.getElementById('page-cart__control-btn');
-        const text = btn.innerHTML;
-        
-        if (text=="PAYMENT"){
-            var name = document.getElementById('name').value;
-            var email = document.getElementById('email').value;
-            var phone = document.getElementById('phone').value;
-            var address = document.getElementById('address').value;
-            var price = document.getElementsByClassName('page-cart__title')[0].innerHTML.slice(8);
-            if ((name == "" || email =="" || phone =="" || address=="")){
-                alert("Please fill in your infomation!");
-            }
-            else{
-                localStorage.setItem("name", name);
-                localStorage.setItem("email", email);
-                localStorage.setItem("phone", phone);
-                localStorage.setItem("address", address);
-                
-                btn.href = 'http://localhost/assignment/Home/payment/'+price;
-            }
-        }
-    }
-
     function ChangeUI(){
         let productNumber = localStorage.getItem('productNumber');
         productNumber = parseInt(productNumber);
 
         if (productNumber > 0){
             var btn = document.getElementById('page-cart__control-btn');
-            var total = document.getElementsByClassName('page-cart__title')[0];
-            // btn.href = 'http://localhost/assignment/Home/payment/';
+            btn.href = '#';
             btn.innerHTML = 'PAYMENT';
             document.getElementsByClassName('page-cart__img')[0].style.display = 'none';
+            var total = document.getElementsByClassName('page-cart__title')[0];
             total.style.textAlign = 'right';
             total.style.marginRight = '50px';
             document.getElementsByClassName('page-cart__list')[0].style.display = 'block';
@@ -305,7 +279,7 @@
         }
         else {
             var btn = document.getElementById('page-cart__control-btn');
-            btn.href = 'http://localhost/assignment/Home/catalog';
+            btn.href = '<%= pages_path %>';
             btn.innerHTML = 'RETURN TO SHOP';
             document.getElementsByClassName('page-cart__img')[0].style.display = 'block';
             var total = document.getElementsByClassName('page-cart__title')[0];

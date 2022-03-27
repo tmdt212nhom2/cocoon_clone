@@ -1,4 +1,5 @@
 <?php
+
     class comment extends Controller{
         function index(){
             $comment = $this->model("CommentModel");
@@ -10,13 +11,6 @@
         function edit(){
             $layout = $this->view("layouts/admin", ["admin_page"=>"admin/comments/edit", "admin_header"=>"shared/admin_header", "admin_sidebar"=>"shared/admin_sidebar"]); 
         }
-        // function delete($pid, $cid){
-        //     $comment = $this->model("CommentModel");
-        //     $layout = $this->view("layouts/admin", ["admin_page"=>"admin/comments/index", "admin_header"=>"shared/admin_header", "admin_sidebar"=>"shared/admin_sidebar", "comment"=>$comment->getComment($pid,$cid), "pid"=>$pid, "cid"=>$cid,"commentModel"=>$comment]); 
-        // }
-        function delete($pid, $cid){
-            $comment = $this->model("CommentModel");
-            $layout = $this->view("layouts/admin", ["admin_page"=>"admin/comments/delete", "admin_header"=>"shared/admin_header", "admin_sidebar"=>"shared/admin_sidebar", "comment"=>$comment->getComment($pid,$cid), "pid"=>$pid,"cid"=>$cid,"commentModel"=>$comment]); 
-        }
+
     }
 ?>
