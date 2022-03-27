@@ -66,12 +66,14 @@
       var price = <?php echo $data["price"]?>;
       var phone = localStorage.getItem("phone");
       var address = localStorage.getItem("address");
-      const datetime = new Date().toJSON().slice(0, 19).replace('T', ' ');
       const orderID = Math.floor(Math.random() * 100000000);
       let userID = JSON.parse(document.getElementsByClassName('user-id')[0].innerHTML); 
+      var today = new Date();
+      today.setHours( today.getHours()+(today.getTimezoneOffset()/-60) );
+      const datetime = today.toJSON().slice(0, 19).replace('T', ' ');
 
     function getOrder(){
-
+   
       var btn = document.getElementById('cod-payment');
       btn.href = 'http://localhost/assignment/Home/test/'+orderID+"/" +userID+"/" +datetime+"/" +price+"/" +name+"/"+email+"/" +phone+"/"+address;
 
