@@ -1,3 +1,9 @@
+<?php
+if (isset($_SESSION["email"]) && $_SESSION["role"] == "customer") {
+  echo '<script type = "text/javascript">
+  window.location.href = "http://localhost/assignment/"</script>';
+}
+?>
 <?php 
     // if(isset($data["id"])){
     //     $id = $data["id"];

@@ -1,3 +1,9 @@
+<?php
+if (isset($_SESSION["email"]) && $_SESSION["role"] == "customer") {
+  echo '<script type = "text/javascript">
+  window.location.href = "http://localhost/assignment/"</script>';
+}
+?>
 
 <div class="page-header">
   <div class="row align-items-center mb-3">

@@ -1,4 +1,9 @@
 <?php 
+if (isset($_SESSION["email"]) && $_SESSION["role"] == "customer") {
+  echo '<script type = "text/javascript">
+  window.location.href = "http://localhost/assignment/"</script>';
+    }
+
     if(isset($data["id"])){
         $id = $data["id"];
         $sql = "DELETE FROM category WHERE category_id =$id";
