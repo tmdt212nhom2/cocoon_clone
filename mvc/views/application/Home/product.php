@@ -130,59 +130,40 @@
                   </div>
                   <ul class="uk-comment-list">
                     <li>
-                      <article class="uk-comment">
-                        <header class="uk-comment-header">
-                          <div class="uk-grid-small uk-grid-divider" data-uk-grid>
-                            <div class="uk-width-auto@s"><img class="uk-comment-avatar" src="./../../../assignment/public/assets/img/blog/img-reviews-1.png" alt></div>
-                            <div class="uk-width-expand@s">
-                              <div class="uk-flex uk-flex-middle uk-margin-small-bottom">
-                                <h4 class="uk-comment-title uk-margin-remove">Ông A</h4><span class="uk-text-meta uk-margin-small-left">18/11/2021</span>
-                              </div>
-                              <div class="uk-comment-body">
-                                <p>Xài tốt</p><a class="link-more" href="#!"><span data-uk-icon="arrow-right">Reply</span></a>
-                              </div>
-                            </div>
-                          </div>
-                        </header>
-                      </article>
-                      <ul>
-                        <li>
-                          <article class="uk-comment">
+                        <article class="uk-comment">
                             <header class="uk-comment-header">
-                              <div class="uk-grid-small uk-grid-divider" data-uk-grid>
-                                <div class="uk-width-auto@s"><img class="uk-comment-avatar" src="./../../../assignment/public/assets/img/blog/img-reviews-2.png" alt></div>
-                                <div class="uk-width-expand@s">
-                                  <div class="uk-flex uk-flex-middle uk-margin-small-bottom">
-                                    <h4 class="uk-comment-title uk-margin-remove">Ông B</h4><span class="uk-text-meta uk-margin-small-left">19/11/2021</span>
-                                  </div>
-                                  <div class="uk-comment-body">
-                                    <p>?</p><a class="link-more" href="#!"><span data-uk-icon="arrow-right">Reply</span></a>
-                                  </div>
+                                <div class="uk-grid-small uk-grid-divider" data-uk-grid>
+                                    <div class="uk-width-auto@s"><img class="uk-comment-avatar" src="../../../assignment/public/assets/img/pages/home/feedback_1.png" alt></div>
+                                    <div class="uk-width-expand@s">
+                                        <div class="uk-flex uk-flex-middle uk-margin-small-bottom">
+                                            <h4 class="uk-comment-title uk-margin-remove">Nguyễn Tiến Thịnh</h4><span class="uk-text-meta uk-margin-small-left">August 20, 2021</span>
+                                        </div>
+                                        <div class="uk-comment-body">
+                                        <p>Tôi năm nay 30 tuổi nên không thích sản phẩm màu mè, bao bì sản phẩm này rất hợp gu thẩm mỹ của tôi.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                              </div>
                             </header>
-                          </article>
-                        </li>
-                      </ul>
+                        </article>
                     </li>
                     <li>
-                      <article class="uk-comment">
-                        <header class="uk-comment-header">
-                          <div class="uk-grid-small uk-grid-divider" data-uk-grid>
-                            <div class="uk-width-auto@s"><img class="uk-comment-avatar" src="./../../../assignment/public/assets/img/blog/img-reviews-3.png" alt></div>
-                            <div class="uk-width-expand@s">
-                              <div class="uk-flex uk-flex-middle uk-margin-small-bottom">
-                                <h4 class="uk-comment-title uk-margin-remove">Bà C</h4><span class="uk-text-meta uk-margin-small-left">19/11/2021</span>
-                              </div>
-                              <div class="uk-comment-body">
-                                <p>Cũng được</p><a class="link-more" href="#!"><span data-uk-icon="arrow-right">Reply</span></a>
-                              </div>
-                            </div>
-                          </div>
-                        </header>
-                      </article>
+                        <article class="uk-comment">
+                            <header class="uk-comment-header">
+                                <div class="uk-grid-small uk-grid-divider" data-uk-grid>
+                                    <div class="uk-width-auto@s"><img class="uk-comment-avatar" src="../../../assignment/public/assets/img/pages/home/feedback_2.png" alt></div>
+                                    <div class="uk-width-expand@s">
+                                        <div class="uk-flex uk-flex-middle uk-margin-small-bottom">
+                                            <h4 class="uk-comment-title uk-margin-remove">Lê Trần Hoàng Thanh</h4><span class="uk-text-meta uk-margin-small-left">August 20, 2020</span>
+                                        </div>
+                                        <div class="uk-comment-body">
+                                        <p>Sử dụng sản phẩm này mang lại cảm giác thư giãn, mùi hương thơm tự nhiên không phải mùi hương liệu nên tôi rất thích.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                        </article>
                     </li>
-                  </ul>
+                </ul>
                   <div class="block-form uk-margin-medium-top">
                     <div class="section-title">
                       <div class="uk-h2">Leave a Reply</div>
