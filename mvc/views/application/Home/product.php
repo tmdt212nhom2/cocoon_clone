@@ -126,7 +126,7 @@
                 <?php echo $row["huongdansudung"] ?>              </li>
                 <li>
                   <div class="section-title">
-                    <div class="uk-h2">Reviews</div>
+                    <div class="uk-h2">Comments</div>
                   </div>
                   <ul class="uk-comment-list">
                     <li>
