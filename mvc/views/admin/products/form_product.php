@@ -10,6 +10,13 @@
             $intro = $_POST['intro'];
             $huongdansudung = $_POST['huongdansudung'];
             $avatar = "/products/$id.png";
+            
+                if ($quantity <= 0 || $price <=0){
+                    echo "<script type='text/javascript'>alert('cap nhat product that bai');
+                    window.location.href = 'http://localhost/assignment/product/index';
+                    </script>";
+                }
+
             if (!isset($data["id"])) {
                 if (($data["productModel"]->con)->query("INSERT INTO product (product_id,product_name,quantity,price,avatar,category_id, intro, huongdansudung) VALUES (N'$id', N'$name',N'$quantity',N'$price', N'$avatar', N'$category_id',N'$intro',N'$huongdansudung')")) {
                     echo "<script type='text/javascript'>alert('them product thanh cong');
